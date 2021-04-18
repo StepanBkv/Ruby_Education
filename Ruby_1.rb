@@ -21,4 +21,6 @@ elsif lang == "C#"
   puts "Скоро будет Ruby"
 elsif lang == "PHP"
   puts "ъеъ. Skoro budet Руби"
+else
+  puts "Такого языка нет("
 end
