@@ -7,19 +7,20 @@ username = "Stepan"
 printf("Какой твой любимый язык программирования, %s?\n", username)
 lang = gets.chomp.strip
 lang.capitalize!
-if lang == "Ruby"
+case lang
+  when "Ruby"
   puts "Подлиза)))))"
-elsif lang == "Python"
+  when "Python"
   puts "Нормально, нормально. Но скоро будет Ruby"
-elsif lang == "C++"
+  when "C++"
   puts "Жесть. Но скоро будет Ruby)"
-elsif lang == "R"
+  when "R"
   puts "Статист значит. Но скоро будет Ruby"
-elsif lang == "JS"
+  when "JS"
   puts "Извращюга. Но Ruby лучше)"
-elsif lang == "C#"
+  when "C#"
   puts "Скоро будет Ruby"
-elsif lang == "PHP"
+  when "PHP"
   puts "ъеъ. Skoro budet Руби"
 else
   puts "Такого языка нет("
