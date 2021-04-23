@@ -26,9 +26,16 @@ username = "Stepan"
 #   puts "Такого языка нет("
 # end
 # 4 задание
-puts "Введите команду на Ruby!"
-intput = gets.chomp.strip
-eval intput
-puts "Введите командную строку своей ОС!"
-input = gets.chomp.strip
-system input
+# puts "Введите команду на Ruby!"
+# intput = gets.chomp.strip
+# eval intput
+# puts "Введите командную строку своей ОС!"
+# input = gets.chomp.strip
+# system input
+# 5 задание работа с числами
+number = gets.chomp
+sum = 0
+number.to_s.each_char do |num|
+  sum += num.to_i
+end
+print sum
