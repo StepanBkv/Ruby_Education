@@ -45,13 +45,19 @@
 # #6
 # list.concat([2, 4, 42, 5, 24])
 #7
-
 def file_read file_name
-  file_list = File.new('data/'+file_name, 'r:UTF-8')
-  list = file_list.gets.chomp().split()
-  return list
+  current_path = File.dirname(__FILE__)
+  if File.exists?(current_path + file_name)
+    file_list = File.new(current_path + file_name, 'r:UTF-8')
+    list = file_list.gets.chomp().split()
+    file_list.close
+    return list
+  else
+    puts("Файл не найден")
+  end
 end
+
 file_name = "ruby_2_list.txt"
-print list = file_read(file_name)
+print list = file_read("/data/" + file_name)
 
 
