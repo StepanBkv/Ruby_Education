@@ -1,50 +1,29 @@
 def min_d list
-  min = 2**16
-  list.each do |num|
-    if(num < min)
-      min = num
-    end
-  end
-  return min
+  return list.min
 end
 
 def max_d list
-  max = 0
-  list.each do |num|
-    if(num > max)
-      max = num
-    end
-  end
-  return max
+  return list.max
 end
 
 def sum_d list
-  sum = 0
-  list.each do |num|
-    sum += num
-  end
-  return sum
+  return list.sum
 end
 
 def mult_d list
-  mult = 1
-  list.each do |num|
-    mult *= num
-  end
-  return mult
+  return list.reduce(1){|mult, num| mult *= num}
 end
 
-list = []
-dsfdsf = lambda { |str, chv = ""| (str + "").each_char do |num| if(num != " ") then chv += num elsif (chv != "") then list += [chv.to_i]; chv = "" end end; list }
-arr_char = gets.chomp
-dsfdsf.call arr_char
+def read
+  print "Введите массив чисел: "
+  arr = gets.chomp().split()
+  return arr.map{|el| el.to_i}
+end
+
+list = read
+
+print list.to_s + "\n"
 puts min_d list
 puts max_d list
 puts sum_d list
 puts mult_d list
-
-# list.each do |num|
-#   if(num != " ")
-#     list += [num.to_i]
-#   end
-# end
