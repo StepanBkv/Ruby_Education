@@ -28,18 +28,30 @@
 # puts sum_d list
 # puts mult_d list
 #1
-print "Введите массив чисел: "
-list = ARGV
-#2
-print "Введите массив чисел: "
-arr = gets.chomp().split()
-list = arr.map { |el| el.to_i }
-#3
-el = gets.chomp()
-list += [el]
-#4
-list.push(el)
-#5
-list.unshift(el)
-#6
-list.concat([2, 4, 42, 5, 24])
+# print "Введите массив чисел: "
+# list = ARGV
+# #2
+# print "Введите массив чисел: "
+# arr = gets.chomp().split()
+# list = arr.map { |el| el.to_i }
+# list = [1, 4, 42, 2, 4, 24, 24, 2, 4]
+# #3
+# el = gets.chomp()
+# list += [el]
+# #4
+# list.push(el)
+# #5
+# list.unshift(el)
+# #6
+# list.concat([2, 4, 42, 5, 24])
+#7
+
+def file_read file_name
+  file_list = File.new('data/'+file_name, 'r:UTF-8')
+  list = file_list.gets.chomp().split()
+  return list
+end
+file_name = "ruby_2_list.txt"
+print list = file_read(file_name)
+
+
